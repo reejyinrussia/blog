@@ -1,0 +1,26 @@
+<%= link_to 'New Blog Post', new_page_path %>
+<hr />
+<h1>All Blog Posts</h1>
+
+<% @pages.each do |page| %>
+  <div>
+
+    <h3>
+      <%= link_to page.title, page_path(page) %>
+    </h3>
+
+    <i>Author: <%= page.author %></i>
+<!--    <p>Body: <%= page.body %></p> -->
+    <strong>PRIVATE: <%= page.private ? 'yes' : 'no' %></strong>
+    <%= link_to 'Delete', page_path(page), method: :delete %>
+  </div>
+  <hr />
+<% end %>
+
+<!-- nonEchoing erb tag -->
+<!-- loops, conditionals, variable -->
+<% %>
+
+<!-- print out the value of a variable -->
+<!-- Echoing erb tag -->
+<%= %>
